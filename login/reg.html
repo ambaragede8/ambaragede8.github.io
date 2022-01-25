@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registrasi Tanya Cinta</title>
+	<link rel="stylesheet" type="text/css" href="css/logstyle.css">
+</head>
+<body>
+	<center><h2>Registrasi Tanya Cinta</h2></center>
+	<div class="registasi">
+		<form action="#" method="POST" onSubmit="validasi()">
+			<div>
+				<label>Nama Lengkap:</label>
+				<input type="text" name="nama" id="nama" />
+			</div>
+			<div>
+				<label>Email:</label>
+				<input type="email" name="email" id="email" />
+			</div>
+			<div>
+				<label>Password:</label>
+				<input type="password" name="password" id="password" />
+			</div>
+			<div>
+				<label>Alamat:</label>
+				<textarea cols="35" rows="5" name="alamat" id="alamat"></textarea>
+			</div>
+			<div>
+				<label>Tanggal Lahir:</label>
+				<input type="date" name="tanggal" id= "tanggal" />
+			</div>
+			<div>
+				<label>Jenis Kelamin:</label>
+				<label><input type="radio" name="jenis_kelamin" value="laki-laki" id = "kelamin" /> Laki-Laki</label>
+				<label><input type="radio" name="jenis_kelamin" value="perempuan" id ="kelamin" /> Perempuan</label>
+			</div>
+         
+			<div>
+				<input type="submit" value="Daftar" class="tombol1">	
+			</div>
+			<div>
+				<audio src="../backsound/mabataki.mp3" autoplay="autoplay"></audio>
+			</div>
+			<br/>
+				<a href="login.html" class="kembali"> Kembali</a>
+		</form>
+	</div>
+    <script>
+        
+        const form = document.querySelector('form')
+        const namaInput = document.querySelector('#nama')
+        const emailInput = document.querySelector('#email')
+		const passwordInput = document.querySelector('#password')
+		const alamatInput = document.querySelector('#alamat')
+		const tanggalInput = document.querySelector('#tanggal')
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            if (namaInput.value == '' || emailInput.value == '' || passwordInput.value == '' || alamatInput.value == '' || tanggalInput.value == '') {
+                alert('Mohon untuk mengisi semua data yang dibutuhkan!')
+            } else {
+                window.location.href = 'login.html'
+            }
+        })
+    </script>
+</body>
+</html>	

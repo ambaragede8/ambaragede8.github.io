@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TANYA CINTA</title>
+	<link rel="stylesheet" href="css/logstyle.css">
+</head>
+<body>
+
+	<h1>Login Tanya Cinta <br/>
+
+	<div class="kotak_login">
+		<p class="tulisan_login"></p>
+
+		<form action="#" method="POST" onSubmit="validasi()">
+		<div>
+			<label>Username</label>
+			<input type="text" name="email" class="email" id = "email" placeholder="Username atau email .."/>
+		</div>
+		<div>	
+			<label>Password</label>
+			<input type="password" name="password" class="password" id = "password" placeholder="Password .."/>
+		</div>
+		<div>
+			<input type="submit" value="Login" class="tombol">		
+		</div>
+     		<br/>
+			<br/>
+			<center>
+				<a href="reg.html">Registrasi</a>
+			</center>
+			<br/>
+			<br/>
+			<center>
+				<a href="../index.html">Kembali</a>
+			</center>
+		</form>
+		<div>
+			<audio src="../backsound/mabataki.mp3" autoplay="autoplay"></audio>
+		</div>
+	</div>
+    <script>
+        
+		const form = document.querySelector('form')
+        const emailInput = document.querySelector('#email')
+		const passwordInput = document.querySelector('#password')
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            if (emailInput.value == '' || passwordInput.value == '') {
+                alert('Mohon untuk mengisi email dan password terlebih dahulu!')
+            } else {
+                window.location.href = '../UASWP.html'
+            }
+        })
+    </script>
+</body>
+</html>
